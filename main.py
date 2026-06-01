@@ -35,9 +35,9 @@ from telegram.ext import (
 )
 
 # ─── PASTE YOUR TOKENS HERE ──────────────────────────────────────────────────
-BOT_TOKEN     = "PASTE_YOUR_BOT_TOKEN_HERE"
-ANTHROPIC_KEY = "PASTE_YOUR_ANTHROPIC_KEY_HERE"
-ALERT_CHAT_ID = 0
+BOT_TOKEN     = os.environ.get("BOT_TOKEN", "")
+ANTHROPIC_KEY = os.environ.get("ANTHROPIC_KEY", "")
+ALERT_CHAT_ID = int(os.environ.get("ALERT_CHAT_ID", "0"))
 # ─────────────────────────────────────────────────────────────────────────────
 
 ai_client = None
